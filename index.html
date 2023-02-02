@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr {
+            display: flex;
+            width: 600px;
+            flex-direction: row;
+        }
+        
+        th {
+            display: flex;
+            width: 600px;
+            flex-direction: row;
+            border: 2px solid orange;
+        }
+
+        input {
+            flex-grow: 1;
+            height: 75px;
+            text-align: end;
+            font-size: 40px;
+        }
+
+        td {
+            border: 2px solid orange;
+            border-radius: 5px;
+            flex-grow: 1;
+            height: 100px;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            line-height: 100px;
+            user-select: none;
+        }
+
+        td:hover {
+            background-color: lightgray;
+        }
+
+        td:active {
+            background-color: rgba(128, 2, 0, 0.167);
+        }
+
+        #wrapper {
+            height: 400px;
+            table-layout:fixed;
+            min-height: 100%;
+            min-width: 100%;
+            width: 100%;
+        }
+
+        #zero {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <table>
+            <th><input type="text" id="display" readonly></th>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>+</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>X</td>
+            </tr>
+            <tr>
+                <td id="zero">0</td>
+                <td>/</td>
+            </tr>
+            <tr>
+                <td>=</td>
+            </tr>
+        </table>
+    </div>   
+    <script src="script.js"></script>
+</body>
+</html>
