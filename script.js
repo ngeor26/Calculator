@@ -1,8 +1,7 @@
 document.addEventListener('click', function(e){
     if(e.target.innerText == "="){
         evaluate(document.querySelector("#display").value)
-    }
-    if(e.target.tagName == "TD"){
+    }else if(e.target.tagName == "TD"){
         display(e.target.innerText)
     }
 })
@@ -12,5 +11,10 @@ function display(val){
 }
 
 function evaluate(expression){
+    expression = expression.split("")
     console.log(expression)
+    while(expression.find("×") != -1){
+        let num = expression[expression.indexOf("×") - 1] * expression[expression.indexOf("×") + 1]
+        console.log(num)
+    }
 }
