@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.70">
     <title>Document</title>
     <style>
         tr {
-            display: flex;
-            width: 600px;
             flex-direction: row;
+            display: flex;
         }
         
         th {
-            display: flex;
-            width: 600px;
-            flex-direction: row;
             border: 2px solid orange;
+            display: flex;
         }
 
         input {
@@ -31,11 +28,7 @@
             border: 2px solid orange;
             border-radius: 5px;
             flex-grow: 1;
-            height: 100px;
             text-align: center;
-            justify-content: center;
-            align-content: center;
-            flex-direction: column;
             line-height: 100px;
             user-select: none;
         }
@@ -46,18 +39,11 @@
 
         td:active {
             background-color: rgba(128, 2, 0, 0.167);
-        }
-
-        #wrapper {
-            height: 400px;
-            table-layout:fixed;
-            min-height: 100%;
-            min-width: 100%;
-            width: 100%;
+            transition: right;
         }
 
         #zero {
-            width: 300px;
+            width: 255px;
         }
 
         body {
@@ -70,10 +56,14 @@
         }
 
         #clear {
-            height: 50px;
             line-height: 50px;
             font-size: x-large;
             font-weight: bold;
+        }
+
+        #wrapper {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
